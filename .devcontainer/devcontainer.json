@@ -1,0 +1,8 @@
+{
+  "name": "n8n-python-lab",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "python",
+  "workspaceFolder": "/workspace",
+  "forwardPorts": [5678],
+  "postCreateCommand": "pip install -r requirements.txt"
+}
