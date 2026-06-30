@@ -1,8 +1,10 @@
 {
   "name": "n8n-python-lab",
-  "dockerComposeFile": "../docker-compose.yml",
-  "service": "python",
-  "workspaceFolder": "/workspace",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
   "forwardPorts": [5678],
-  "postCreateCommand": "pip install -r requirements.txt"
+  "postCreateCommand": "pip install -r requirements.txt",
+  "postStartCommand": "docker compose up -d"
 }
